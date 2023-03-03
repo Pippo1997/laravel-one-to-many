@@ -34,7 +34,9 @@
                     Tipo
                 </label>
                 <select class="form-control" id="type_id" name ="type_id">
-                    <option value="">Seleziona Tipo</option>
+                    <option value="">
+                        Tipo
+                    </option>
                     @foreach ($types as $type)
                         <option value="{{ $type->id }}">{{ $type->name }}</option>
                     @endforeach

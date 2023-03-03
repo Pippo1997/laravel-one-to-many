@@ -25,7 +25,8 @@ class StoreProjectRequest extends FormRequest
     {
         return [
             'title' => ['required', 'unique:projects', 'max:150'],
-            'content' => ['nullable']
+            'content' => ['nullable'],
+            'type_id' => ['nullable', 'exists:types,id']
         ];
     }
 
@@ -35,6 +36,7 @@ class StoreProjectRequest extends FormRequest
             'title.required' => 'Il titolo è richiesto',
             'title.unique' => 'E\ già presente questo titolo',
             'title.max' => 'Il titolo può essere lungo al massimo 150 cratteri',
+            'type_id.exists' => 'Il Tipo selezionato non è valido',
         ];
     }
 }
