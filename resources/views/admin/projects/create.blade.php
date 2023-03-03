@@ -30,6 +30,17 @@
                 <textarea type="text-area" class="form-control" placeholder="Contenuto" id="content" name ="content"></textarea>
             </div>
             <div class="form-group my-3">
+                <label class="control-label">
+                    Tipo
+                </label>
+                <select class="form-control" id="type_id" name ="type_id">
+                    <option value="">Seleziona Tipo</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group my-3">
                 <button type="submit" class="btn btn-sm btn-success">Salva Project</button>
             </div>
             </form>
