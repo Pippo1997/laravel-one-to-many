@@ -51,7 +51,7 @@ class ProjectController extends Controller
         $newProject->fill($form_data);
         $newProject->save();
 
-        return redirect()->route('admin.projects.index')->with('message'. 'Project creato correttamente');
+        return redirect()->route('admin.projects.index')->with('message'. ' il Project creato correttamente');
     }
 
     /**
@@ -93,7 +93,7 @@ class ProjectController extends Controller
 
         $project->update($form_data);
 
-        return redirect()->route('admin.projects.index')->with('message', $project->title.'Il Projectè stato correttamente aggiornato');
+        return redirect()->route('admin.projects.index')->with('message', $project->title.' Il Project è stato correttamente aggiornato');
     }
 
     /**
@@ -106,6 +106,6 @@ class ProjectController extends Controller
     {
         $project->delete();
 
-        return redirect()->route('admin.projects.index')->with('message', $project->title.'Il Project cancellato correttamente');
+        return redirect()->route('admin.projects.index')->with('message', $project->title.' Il Project cancellato correttamente');
     }
 }

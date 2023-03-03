@@ -16,6 +16,7 @@
             <p><strong>Slug: </strong>{{ $project->slug }}</p>
             <label class="d-block"><strong>Contenuto:</strong></label>
             <p>{{ $project->content }}</p>
+            <p><strong>Tipo: </strong>{{ $project->type ?  $project->type->name : 'senza tipo'}}</p>
         </div>
     </div>
 </div>
